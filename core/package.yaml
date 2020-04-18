@@ -1,0 +1,58 @@
+name:                coinkeeper-allowed-daily-spendings-widget-core
+version:             0.1.0.0
+github:              "githubuser/coinkeeper-allowed-daily-spendings-widget-core"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2020 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/coinkeeper-allowed-daily-spendings-widget-core#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- req
+- aeson
+- text
+- bytestring
+- vector
+- utf8-string
+- time
+- unordered-containers
+- transformers
+- mtl
+
+library:
+  source-dirs: src
+
+executables:
+  coinkeeper-allowed-daily-spendings-widget-core-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - coinkeeper-allowed-daily-spendings-widget-core
+
+tests:
+  coinkeeper-allowed-daily-spendings-widget-core-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - coinkeeper-allowed-daily-spendings-widget-core
